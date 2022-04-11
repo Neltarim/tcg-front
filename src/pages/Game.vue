@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-red w-screen h-screen">
+    <section class=" w-screen h-screen">
         <p class="">test</p>
     </section>
 </template>
