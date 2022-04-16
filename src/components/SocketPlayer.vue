@@ -3,7 +3,6 @@
     <h2 class="text-white text-xl text-center mb-5">{{ username }}</h2>
     <div class="flex gap-3">
       <SimpleButton class="bg-green" text="start" @click="start()" />
-      <SimpleButton v-if="socket && !logged" text="login" @click="login()" />
       <SimpleButton class="bg-red" text="stop" @click="stop()" />
     </div>
     <div v-if="logged" class="flex gap-3 mt-4">
@@ -34,19 +33,18 @@ export default {
       console.log('Init socket ...')
       this.socket = new WebSocket(this.matchMakingURL)
 
-      this.socket.onclose = function (e) {
+      this.socket.onclose = function () {
         console.log('Socket is closed.');
-        console.log(e.reason)
       };
       // Sending the info about the room
       this.socket.onmessage = function (e) {
         let data = JSON.parse(e.data);
-        data = data["payload"] || 'no payload';
-        let message = data['message'] || 'no message';
-        let event = data["event"] || 'no event';
+        data = data["payload"] || '';
+        let message = data['message'] || '';
+        let event = data["event"] || '';
         console.log(event, message)
       };
-      
+      setTimeout(this.login, 50)
     },
     login() {
       this.logged = false
