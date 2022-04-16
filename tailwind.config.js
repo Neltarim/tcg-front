@@ -1,13 +1,15 @@
 const customColors = {
   text: 'var(--color-text)',
   neutral: 'var(--color-neutral)',
-  body: 'var(--color-body)',
-  primary: 'var(--color-primary)',
-  'primary-light': 'var(--color-primary-light)',
+  body: '#323b4a',
+  primary: '#F9FAFB',
+  'primary-light': '#6586a7',
   'primary-lighter': 'var(--color-primary-lighter)',
   'primary-lightest': 'var(--color-primary-lightest)',
   red: '#801515',
   'red-light': '#ffaaaa',
+  green: '#58cd4d',
+  black: '#444444',
   yellow: '#FFD275',
   info: '#1276b8',
   'info-light': '#b5ddf8',
@@ -17,6 +19,7 @@ const customColors = {
   'error-light': '#FECACA',
   success: '#84CC16',
   'success-light': '#D9F99D',
+  white: '#FFFF',
 }
 
 module.exports = {

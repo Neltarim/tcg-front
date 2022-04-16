@@ -7,7 +7,7 @@ const originalState = {
     hp: 30,
   },
   opponent: {
-    handLength: null,
+    hand: null,
     hp: 30,
   }
 }

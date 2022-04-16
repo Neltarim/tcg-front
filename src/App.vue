@@ -1,17 +1,14 @@
 <template>
-<div>
-  <link href="/dist/output.css" rel="stylesheet">
-  <Game />
-</div>
+  <div class="w-screen h-screen bg-body">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import Game from './pages/Game.vue'
 
 export default {
   name: 'App',
   components: {
-    Game
   }
 }
 </script>
@@ -21,7 +18,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 </style>
