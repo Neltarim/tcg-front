@@ -1,4 +1,4 @@
-# tcg_system
+# tcg-front [WORK IN PROGRESS]
 
 ## Project setup
 ```
