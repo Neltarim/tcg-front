@@ -14,7 +14,7 @@ export default {
   components: {SocketPlayer},
   data: () => {
     return {
-      players: ['neltarim', 'sasono']
+      players: ['neltarim', 'sasono', 'njarween']
     }
   },
   methods: {
