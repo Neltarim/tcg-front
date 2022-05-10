@@ -31,9 +31,9 @@ import ObjectsTable from "../components/Game/player/ObjectsTable.vue";
 import CraftTable from "../components/Game/player/CraftTable.vue";
 import ActionStack from "../components/Game/ActionStack.vue";
 
-import Heroes from "../assets/data/heroes.js"
-import Recipes from "../assets/data/recipes.js"
-import Ressources from "../assets/data/ressources.js"
+import getHero from "../assets/data/heroes.js"
+import getRecipe from "../assets/data/recipes.js"
+import getRessource from "../assets/data/ressources.js"
 
 
 export default {
@@ -58,19 +58,19 @@ export default {
 
 
     this.opponent = {
-      hero: Heroes.get(1),
+      hero: getHero(1),
       servants: [],
     }
 
     this.player = {
-      hero: Heroes.get(2),
+      hero: getHero(2),
       servants: [],
       ressources: ressourcesRefs.map((ref) => {
-        let res = Ressources[ref.id]
+        let res = getRessource(ref.id)
         res.quantity = ref.quantity
         return res
       }),
-      recipes: recipesRefs.map((id) => Recipes.get(id)),
+      recipes: recipesRefs.map((id) => getRecipe(id)),
       objects: [],
     }
   }
